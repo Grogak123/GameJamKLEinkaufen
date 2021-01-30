@@ -1,9 +1,54 @@
 fileFormatVersion: 2
-guid: fd62bc121b182ba479d3c49b54b238a2
+guid: 1087e522f6a760e498ddfa5f2297bfa1
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bier
+    second: {fileID: 2100000, guid: 6b1e4745ef1a320409e8ca660a2bb7db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Deckel 2
+    second: {fileID: 2100000, guid: e07858ead8f8e274a895259a570190c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #76
+    second: {fileID: 2100000, guid: d3d450eeed73b4f4786ef29e840bc6bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #88
+    second: {fileID: 2100000, guid: 1802fc6e29afaa84e9c3a20117bb9737, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #90
+    second: {fileID: 2100000, guid: 6ea4881e104311c429ef9f6e4d1e9ee5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #91
+    second: {fileID: 2100000, guid: 16b92e99363c66b4283196da03a765e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #94
+    second: {fileID: 2100000, guid: cfd7b5d0b7499f34fb3a867088accd2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rotwein
+    second: {fileID: 2100000, guid: c7d9c2e5192ef5748b09e58a0fc52f03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wein 2
+    second: {fileID: 2100000, guid: 717dfc6353fa0b7409cbe644c400398d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

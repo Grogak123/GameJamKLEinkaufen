@@ -1,21 +1,38 @@
+using UnityEditor;
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 [ExecuteInEditMode]
+[RequireComponent(typeof(MeshFilter))]
+[RequireComponent(typeof(MeshRenderer))]
 public class ShelfRandomFill : MonoBehaviour
 {
     [SerializeField]
     private GameObject scatterObject;
 
-    [SerializeField]
-    private int emptySpaces;
+    public float scatterObjectWidth;
 
     [SerializeField]
-    private int shelfLinePositions;
+    private int randomEmptySpaces;
+
+    [SerializeField]
+    private int objectsInOneLine;
 
     [SerializeField]
     private int shelfRows;
+
+    [SerializeField]
+    private int shelfRowsStartHeight;
+
+    [SerializeField]
+    private int shelfRowsEndHeight;
+
+    [Range(0.0f, 0.25f)]
+    public float randomOffset;
+
+    public float depthOffset;
 
     public float rowHeight = 0.39601f;
     public float shelfLength = 0.94248f;
@@ -30,13 +47,16 @@ public class ShelfRandomFill : MonoBehaviour
 
         parentObj.transform.SetParent(gameObject.transform);
 
-        int itemsToPlace = shelfLinePositions * 5;
-        float tempWidth = shelfLength / (shelfLinePositions + 1);
+        int itemsToPlace = (objectsInOneLine * (shelfRowsEndHeight - shelfRowsStartHeight)) * shelfRows;
 
-        int currentHeight = 0;
+        float spaceBetweenObjects = shelfLength - (scatterObjectWidth * objectsInOneLine);
+        spaceBetweenObjects = spaceBetweenObjects / (objectsInOneLine + 1);
+
+
+        int currentHeight = shelfRowsStartHeight;
         int currentPlace = 1;
 
-        float currentRowWidth = -tempWidth;
+        float currentRowWidth = offsetShelfLeft + spaceBetweenObjects + (scatterObjectWidth / 2);
         float tempDepth = depth / (shelfRows + 1);
 
         Vector3 objPosition = new Vector3(0, 0, 0);
@@ -53,27 +73,27 @@ public class ShelfRandomFill : MonoBehaviour
 
                 objPosition.y = offsetGround + currentHeight * rowHeight;
 
-
-                currentRowWidth = offsetShelfLeft + currentPlace * tempWidth;
-
                 objPosition.z = currentRowWidth;
-                objPosition.z += Random.Range(-0.025f, 0.025f);
+
+                currentRowWidth += (spaceBetweenObjects + scatterObjectWidth);
+
+                objPosition.z += Random.Range(-randomOffset, randomOffset);
 
                 currentScatterObj.transform.position = objPosition;
 
                 currentPlace++;
 
-                if (currentPlace > shelfLinePositions)
+                if (currentPlace > objectsInOneLine)
                 {
                     currentPlace = 1;
 
                     currentHeight++;
 
-                    currentRowWidth = -tempWidth;
+                    currentRowWidth = offsetShelfLeft + spaceBetweenObjects + (scatterObjectWidth / 2);
 
-                    if (currentHeight >= 5)
+                    if (currentHeight >= shelfRowsEndHeight)
                     {
-                        currentHeight = 0;
+                        currentHeight = shelfRowsStartHeight;
                         currentPlace = 1;
 
                         break;
@@ -82,16 +102,44 @@ public class ShelfRandomFill : MonoBehaviour
             }
         }
 
-
-        
-
-        for (int i = 0; i < emptySpaces; i++)
+        //Zufällig Items löschen
+        for (int i = 0; i < randomEmptySpaces; i++)
         {
             int x = Random.Range(0, parentObj.transform.childCount);
 
             DestroyImmediate(parentObj.transform.GetChild(x).gameObject);
         }
 
-        parentObj.transform.localPosition = new Vector3(0, 0, 0);
+        //Meshes zu einem neuen Mesh zusammenfügen
+
+
+        //MeshFilter[] meshFilters = parentObj.GetComponentsInChildren<MeshFilter>();
+
+        //CombineInstance[] combine = new CombineInstance[meshFilters.Length];
+
+        //int z = 0;
+        //while (z < meshFilters.Length)
+        //{
+        //    combine[z].mesh = meshFilters[z].sharedMesh;
+
+        //    combine[z].transform = meshFilters[z].transform.localToWorldMatrix;
+
+        //    meshFilters[z].gameObject.SetActive(false);
+
+        //    z++;
+        //}
+
+        //GameObject newMesh = new GameObject(scatterObject.name + "_CombinedMesh");
+        //newMesh.AddComponent<MeshFilter>();
+        //newMesh.AddComponent<MeshRenderer>();
+
+        //newMesh.GetComponent<MeshFilter>().mesh = new Mesh();
+        //newMesh.GetComponent<MeshFilter>().sharedMesh.CombineMeshes(combine);
+
+        //newMesh.GetComponent<MeshRenderer>().material = scatterObject.GetComponent<MeshRenderer>().sharedMaterial;
+
+        //SaveMesh(newMesh.GetComponent<MeshFilter>().sharedMesh, scatterObject.name + "_CombinedMesh", false, false);
+
+        //parentObj.transform.localPosition = new Vector3(0, 0, 0);
     }
 }
