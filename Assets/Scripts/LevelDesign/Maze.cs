@@ -121,7 +121,9 @@ public class Maze : MonoBehaviour {
 
 	private void CreateWall (MazeCell cell, MazeCell otherCell, MazeDirection direction) {
 		MazeWall wall = Instantiate(wallPrefab) as MazeWall;
+		//Eckenwand wird hier erstellt
 		wall.Initialize(cell, otherCell, direction);
+		
 		if (otherCell != null) {
 			wall = Instantiate(wallPrefab) as MazeWall;
 			wall.Initialize(otherCell, cell, direction.GetOpposite());
