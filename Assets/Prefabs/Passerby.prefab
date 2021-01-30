@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6882024558013428142
+--- !u!1 &2360148591187873146
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6882024558013428129}
-  - component: {fileID: 6882024558013428130}
-  - component: {fileID: 6882024558013428131}
-  - component: {fileID: 6882024558013428140}
-  - component: {fileID: 6882024558013428128}
-  - component: {fileID: 6882024558013428143}
+  - component: {fileID: 2360148591187873088}
+  - component: {fileID: 2360148591187873095}
+  - component: {fileID: 2360148591187873094}
+  - component: {fileID: 2360148591187873093}
+  - component: {fileID: 2360148591187873092}
+  - component: {fileID: 2360148591187873147}
   m_Layer: 0
-  m_Name: PursueingEnemy
+  m_Name: Passerby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6882024558013428129
+--- !u!4 &2360148591187873088
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6882024558013428142}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_GameObject: {fileID: 2360148591187873146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6882024558013428130
+--- !u!33 &2360148591187873095
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6882024558013428142}
+  m_GameObject: {fileID: 2360148591187873146}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6882024558013428131
+--- !u!23 &2360148591187873094
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6882024558013428142}
+  m_GameObject: {fileID: 2360148591187873146}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -84,13 +84,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6882024558013428140
+--- !u!136 &2360148591187873093
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6882024558013428142}
+  m_GameObject: {fileID: 2360148591187873146}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -98,39 +98,37 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!143 &6882024558013428128
+--- !u!143 &2360148591187873092
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6882024558013428142}
+  m_GameObject: {fileID: 2360148591187873146}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 1
+  m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6882024558013428143
+--- !u!114 &2360148591187873147
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6882024558013428142}
+  m_GameObject: {fileID: 2360148591187873146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffe4fe3d4bd748d458deec3670f21d3c, type: 3}
+  m_Script: {fileID: 11500000, guid: a58aa178ee20eac469a0462b6826396e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  detectionRadius: 10
-  dread: 10
   roamingTimeMin: 0.5
   roamingTimeMax: 3
   idleTimeMin: 3
