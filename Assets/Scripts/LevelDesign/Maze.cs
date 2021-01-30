@@ -16,7 +16,7 @@ public class Maze : MonoBehaviour {
 	[Range(0f, 1f)]
 	public float doorProbability;
 
-	public MazeWall wallPrefab;
+	public MazeWall[] wallPrefabs;
 
 	public MazeRoomSettings[] roomSettings;
 
@@ -120,12 +120,12 @@ public class Maze : MonoBehaviour {
 	}
 
 	private void CreateWall (MazeCell cell, MazeCell otherCell, MazeDirection direction) {
-		MazeWall wall = Instantiate(wallPrefab) as MazeWall;
+		MazeWall wall = Instantiate(wallPrefabs[Random.Range(0, wallPrefabs.Length)]) as MazeWall;
 		//Eckenwand wird hier erstellt
 		wall.Initialize(cell, otherCell, direction);
 		
 		if (otherCell != null) {
-			wall = Instantiate(wallPrefab) as MazeWall;
+			wall = Instantiate(wallPrefabs[Random.Range(0, wallPrefabs.Length)]) as MazeWall;
 			wall.Initialize(otherCell, cell, direction.GetOpposite());
 		}
 	}

@@ -50,7 +50,11 @@ MonoBehaviour:
   passagePrefab: {fileID: 11400000, guid: 4db582300649e4e399ee4a2665f9e8e6, type: 3}
   doorPrefab: {fileID: 11400002, guid: ddd2858d08f2e45f3b4b479b51caf822, type: 3}
   doorProbability: 0.15
-  wallPrefab: {fileID: 11400000, guid: 2970089c471ef4c599835c1992954af5, type: 3}
+  wallPrefabs:
+  - {fileID: 3915574282860538574, guid: 42cf75c7c01e8184eaf6af162c69c6c5, type: 3}
+  - {fileID: 5885267551064739565, guid: f5667f27fa99ce44fba1e1cab51fe69f, type: 3}
+  - {fileID: 8775326338813867997, guid: 099d055d77f619745bb6eea8fce35e8d, type: 3}
+  - {fileID: 645754981372378039, guid: 334b42a8e3b2a9b4099bdafdb37d44dc, type: 3}
   roomSettings:
   - floorMaterial: {fileID: 2100000, guid: 1ab50c00f5e744989a090ed703902070, type: 2}
     wallMaterial: {fileID: 2100000, guid: 3c8277134dbc94613abf28d0ecb397f2, type: 2}
