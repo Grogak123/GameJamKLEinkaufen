@@ -77,6 +77,7 @@ public class Maze : MonoBehaviour {
 			}
 		}
 		else {
+			//Border Walls
 			CreateWall(currentCell, null, direction);
 		}
 	}

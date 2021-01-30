@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size:
-    x: 20
-    z: 20
+    x: 10
+    z: 10
   cellPrefab: {fileID: 11400000, guid: 8cc5710f710a24360a566370d7049cf8, type: 3}
   passagePrefab: {fileID: 11400000, guid: 4db582300649e4e399ee4a2665f9e8e6, type: 3}
   doorPrefab: {fileID: 11400002, guid: ddd2858d08f2e45f3b4b479b51caf822, type: 3}
@@ -56,7 +56,7 @@ MonoBehaviour:
     wallMaterial: {fileID: 2100000, guid: 3c8277134dbc94613abf28d0ecb397f2, type: 2}
   - floorMaterial: {fileID: 2100000, guid: 1ab50c00f5e744989a090ed703902070, type: 2}
     wallMaterial: {fileID: 2100000, guid: 3c8277134dbc94613abf28d0ecb397f2, type: 2}
-  - floorMaterial: {fileID: 2100000, guid: 1ab50c00f5e744989a090ed703902070, type: 2}
-    wallMaterial: {fileID: 2100000, guid: 3c8277134dbc94613abf28d0ecb397f2, type: 2}
-  - floorMaterial: {fileID: 2100000, guid: 1ab50c00f5e744989a090ed703902070, type: 2}
-    wallMaterial: {fileID: 2100000, guid: 3c8277134dbc94613abf28d0ecb397f2, type: 2}
+  - floorMaterial: {fileID: 2100000, guid: a482f5db0ed124d9ca47f89d651edd14, type: 2}
+    wallMaterial: {fileID: 2100000, guid: 1ab50c00f5e744989a090ed703902070, type: 2}
+  - floorMaterial: {fileID: 2100000, guid: d7cf90edfb2224dd39d1cccecf963e87, type: 2}
+    wallMaterial: {fileID: 2100000, guid: c93005eefa3ee49c084cc0b4e1a3b85d, type: 2}
