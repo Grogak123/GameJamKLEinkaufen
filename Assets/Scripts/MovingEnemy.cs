@@ -8,8 +8,8 @@ public class MovingEnemy : MonoBehaviour {
 
     private CharacterController charController;
     private List<Transform> waypoints;
-    private int nextWaypointIdx = 0;
-    private Transform nextWaypoint;
+    private int currentWaypointIdx = 0;
+    private Transform currentWaypoint;
 
     // Start is called before the first frame update
     void Start() {
@@ -21,32 +21,30 @@ public class MovingEnemy : MonoBehaviour {
         }
 
         if (waypoints.Count > 0) {
-            nextWaypoint = waypoints[nextWaypointIdx];
+            currentWaypoint = waypoints[currentWaypointIdx];
         }
     }
 
     // Update is called once per frame
     void Update() {
-        if (!nextWaypoint) {
+        if (!currentWaypoint) {
             if (waypoints.Count > 0) {
-                nextWaypoint = waypoints[nextWaypointIdx];
+                currentWaypoint = waypoints[currentWaypointIdx];
             }
             else {
                 return;
             }
         }
 
-        if (Vector3.Distance(transform.position, nextWaypoint.position) < 0.1f) {
-            nextWaypointIdx = (nextWaypointIdx + 1) % waypoints.Count;
-            nextWaypoint = waypoints[nextWaypointIdx];
+        if (Vector3.Distance(transform.position, currentWaypoint.position) < 0.1f) {
+            currentWaypointIdx = (currentWaypointIdx + 1) % waypoints.Count;
+            currentWaypoint = waypoints[currentWaypointIdx];
         }
 
-        Debug.Log(Vector3.Distance(transform.position, nextWaypoint.position));
-
         float step = speed * Time.deltaTime;
-        Vector3 movement = step * Vector3.Normalize(nextWaypoint.position - transform.position);
+        Vector3 movement = step * Vector3.Normalize(currentWaypoint.position - transform.position);
         charController.Move(movement);
 
-        transform.LookAt(new Vector3(nextWaypoint.position.x, transform.position.y, nextWaypoint.position.z));
+        transform.LookAt(new Vector3(currentWaypoint.position.x, transform.position.y, currentWaypoint.position.z));
     }
 }
