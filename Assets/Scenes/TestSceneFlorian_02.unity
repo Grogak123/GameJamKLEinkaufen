@@ -550,6 +550,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8690186219910121441, guid: 7a06715f7d3db2a4790d3295b1821a8b, type: 3}
+      propertyPath: mainMenuName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690186219910121441, guid: 7a06715f7d3db2a4790d3295b1821a8b, type: 3}
+      propertyPath: gameSceneName
+      value: TestSceneFlorian_02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a06715f7d3db2a4790d3295b1821a8b, type: 3}
 --- !u!1 &1312697938
