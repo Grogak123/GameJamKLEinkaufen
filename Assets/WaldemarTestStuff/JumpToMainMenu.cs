@@ -12,12 +12,12 @@ public class JumpToMainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(mainMenuName);
         }
 
-        if (Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(gameSceneName);
         }
