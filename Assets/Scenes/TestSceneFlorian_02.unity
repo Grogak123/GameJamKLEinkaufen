@@ -192,6 +192,10 @@ PrefabInstance:
       propertyPath: near clip plane
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 7524189245839324581, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
+      propertyPath: mouseSensitivity
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7524189247290329338, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
       propertyPath: m_Name
       value: CharacterControllerNew
