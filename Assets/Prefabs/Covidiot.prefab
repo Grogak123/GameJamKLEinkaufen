@@ -1993,9 +1993,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  speed: 4
-  detectionRadius: 15
-  dread: 20
+  speed: 6
+  detectionRadius: 20
+  dread: 15
   roamingTimeMin: 0.5
   roamingTimeMax: 4
   idleTimeMin: 2
