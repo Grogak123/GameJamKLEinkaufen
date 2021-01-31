@@ -55,12 +55,15 @@ MonoBehaviour:
   - {fileID: 5885267551064739565, guid: f5667f27fa99ce44fba1e1cab51fe69f, type: 3}
   - {fileID: 8775326338813867997, guid: 099d055d77f619745bb6eea8fce35e8d, type: 3}
   - {fileID: 645754981372378039, guid: 334b42a8e3b2a9b4099bdafdb37d44dc, type: 3}
+  - {fileID: 1537039517645478829, guid: 1d1a6d73f5e3553459cefddadd32b4c0, type: 3}
   roomSettings:
   - floorMaterial: {fileID: 2100000, guid: 75fff50a0c9525b4fb3004c6fd1e77e3, type: 2}
     wallMaterial: {fileID: 2100000, guid: 3c8277134dbc94613abf28d0ecb397f2, type: 2}
   - floorMaterial: {fileID: 2100000, guid: 75fff50a0c9525b4fb3004c6fd1e77e3, type: 2}
-    wallMaterial: {fileID: 2100000, guid: c93005eefa3ee49c084cc0b4e1a3b85d, type: 2}
+    wallMaterial: {fileID: 2100000, guid: 3c8277134dbc94613abf28d0ecb397f2, type: 2}
   - floorMaterial: {fileID: 2100000, guid: 75fff50a0c9525b4fb3004c6fd1e77e3, type: 2}
-    wallMaterial: {fileID: 2100000, guid: 18b63f50e1eed41e28e31bbc33b5b467, type: 2}
+    wallMaterial: {fileID: 2100000, guid: 3c8277134dbc94613abf28d0ecb397f2, type: 2}
   - floorMaterial: {fileID: 2100000, guid: 75fff50a0c9525b4fb3004c6fd1e77e3, type: 2}
-    wallMaterial: {fileID: 2100000, guid: 04a41fca2fffc4d48803bab4f7af8d2c, type: 2}
+    wallMaterial: {fileID: 2100000, guid: 3c8277134dbc94613abf28d0ecb397f2, type: 2}
+  - floorMaterial: {fileID: 2100000, guid: 75fff50a0c9525b4fb3004c6fd1e77e3, type: 2}
+    wallMaterial: {fileID: 2100000, guid: 3c8277134dbc94613abf28d0ecb397f2, type: 2}
