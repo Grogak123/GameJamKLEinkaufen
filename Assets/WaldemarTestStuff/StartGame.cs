@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 public class StartGame : MonoBehaviour
 {
 
+
+    public string loadGameScene;
+
+
     public void LoadGame()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(loadGameScene);
     }
 
 
