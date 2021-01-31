@@ -113,10 +113,10 @@ public class MeshCombiner : MonoBehaviour
 
         Mesh meshToSave = (makeNewInstance) ? Object.Instantiate(mesh) as Mesh : mesh;
 
-        if (optimizeMesh)
-            MeshUtility.Optimize(meshToSave);
+        //if (optimizeMesh)
+        //    MeshUtility.Optimize(meshToSave);
 
-        AssetDatabase.CreateAsset(meshToSave, "Assets/Modelle/JoinedMeshes/" + name + ".asset");
-        AssetDatabase.SaveAssets();
+        //AssetDatabase.CreateAsset(meshToSave, "Assets/Modelle/JoinedMeshes/" + name + ".asset");
+        //AssetDatabase.SaveAssets();
     }
 }
