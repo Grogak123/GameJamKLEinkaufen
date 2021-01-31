@@ -24,6 +24,8 @@ public class PursueingEnemy : MonoBehaviour {
     private bool playerCollisionThisFrame;
     private bool playerCollisionLastFrame;
 
+    private Vector3 gravityVector = new Vector3(0f, -9.8f, 0f);
+
 
     // Start is called before the first frame update
     void Start() {
@@ -53,12 +55,14 @@ public class PursueingEnemy : MonoBehaviour {
             playerCollisionLastFrame = false;
         }
 
-        if (!player) {
-            Debug.Log("No player found!");
-            return;
+        float playerDistance = Mathf.Infinity;
+        if (player) {
+            playerDistance = Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(player.position.x, player.position.z));
         }
+        else {
 
-        float playerDistance = Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(player.position.x, player.position.z));
+        }
+        
         if (playerDistance < detectionRadius) {
             if (!isPursueing) {
                 startPursueing();
@@ -93,6 +97,9 @@ public class PursueingEnemy : MonoBehaviour {
 
         }
 
+        if (!charController.isGrounded) {
+            charController.Move(gravityVector * Time.deltaTime);
+        }
     }
 
 
@@ -119,7 +126,9 @@ public class PursueingEnemy : MonoBehaviour {
     void Roam() {
         float step = speed * Time.deltaTime;
         Vector3 movement = step * roamingDir;
+        movement.y = 0f;
         charController.Move(movement);
+        
 
         if (movement.magnitude != 0f) {
             transform.rotation = Quaternion.LookRotation(movement);
@@ -136,15 +145,19 @@ public class PursueingEnemy : MonoBehaviour {
 
 
     void Pursue() {
-        float step = speed * Time.deltaTime;
         Vector3 movement = player.position - transform.position;
         movement.y = 0f;
-        movement = step * Vector3.Normalize(movement);
-        charController.Move(movement);
+        movement = Vector3.ClampMagnitude(movement, speed);
+        movement *= Time.deltaTime;
 
         if (movement.magnitude != 0f) {
             transform.rotation = Quaternion.LookRotation(movement);
         }
+
+        charController.Move(movement);
+
+
+
     }
 
 
