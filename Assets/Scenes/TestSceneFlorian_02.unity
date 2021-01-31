@@ -130,6 +130,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 636482649, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
+      propertyPath: m_Text
+      value: 'You found your mother!
+
+        Press escape to jump to the main menu
+
+        or
+        press R to play again!'
+      objectReference: {fileID: 0}
     - target: {fileID: 687734859, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
       propertyPath: m_RenderMode
       value: 0
@@ -137,6 +146,15 @@ PrefabInstance:
     - target: {fileID: 687734859, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 854756766, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
+      propertyPath: m_Text
+      value: 'You didn''t find your mother!
+
+        Don''t cry, Press R tu try again
+
+        or
+        press Escape to Main Menu.'
       objectReference: {fileID: 0}
     - target: {fileID: 1068302365, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
       propertyPath: m_Layer
@@ -158,6 +176,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontStyle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1485832650282582722, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
+      propertyPath: GameEndCanvas
+      value: 
+      objectReference: {fileID: 122497409}
     - target: {fileID: 7524189245839324577, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -220,6 +242,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
+--- !u!1 &122497409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1096960454, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
+  m_PrefabInstance: {fileID: 122497408}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &261387894
 PrefabInstance:
   m_ObjectHideFlags: 0
