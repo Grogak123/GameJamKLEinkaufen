@@ -8,6 +8,8 @@ public class DreadMeter : MonoBehaviour {
     public float dreadGrowth;
     public Text display;
 
+    public GameObject GameEndCanvas;
+
     private float dreadValue;
 
     // Start is called before the first frame update
@@ -17,11 +19,19 @@ public class DreadMeter : MonoBehaviour {
 
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         ModifyValue(Time.deltaTime * dreadGrowth);
-        if (display) {
+        if (display)
+        {
             display.text = Mathf.RoundToInt(dreadValue).ToString();
         }
+
+        if(dreadValue >= 100f)
+        {
+            GameEndCanvas.SetActive(true);
+        }
+
     }
 
 

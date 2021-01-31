@@ -15,5 +15,10 @@ public class JumpToMainMenu : MonoBehaviour
         {
             SceneManager.LoadScene("MainMenu");
         }
+
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            SceneManager.LoadScene("GameScene");
+        }
     }
 }
