@@ -32,6 +32,24 @@ public class WatermelonTrigger : MonoBehaviour
 
                 rb.AddForce(new Vector3(Random.Range(0, 3), .5f, 0), ForceMode.Impulse);
             }
+            StartCoroutine(wait());
+           
+        }
+    }
+
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSecondsRealtime(5);
+        Delete();
+
+    }
+
+    void Delete()
+    {
+        for (int i = 0; i < rbObjects.Count; i++)
+        {
+            Destroy(rbObjects[i]);
         }
     }
 }
