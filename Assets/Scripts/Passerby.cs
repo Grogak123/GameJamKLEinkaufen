@@ -11,13 +11,17 @@ public class Passerby : MonoBehaviour {
     public float idleTimeMax;
 
     private CharacterController charController;
+    private Animator animator;
     private bool isRoaming;
     private float timeLeft;
     private Vector3 roamingDir;
 
+    private Vector3 gravityVector = new Vector3(0f, -9.8f, 0f);
+
     // Start is called before the first frame update
     void Start() {
         charController = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
         isRoaming = false;
         roamingDir = new Vector3();
         startIdling();
@@ -41,12 +45,18 @@ public class Passerby : MonoBehaviour {
                 startRoaming();
             } 
         }
+
+        if (!charController.isGrounded) {
+            charController.Move(gravityVector * Time.deltaTime);
+        }
     }
 
 
     void startIdling() {
         isRoaming = false;
         timeLeft = Random.Range(idleTimeMin, idleTimeMax);
+
+        animator.SetBool("isWalking", false);
     }
 
 
@@ -55,6 +65,8 @@ public class Passerby : MonoBehaviour {
         timeLeft = Random.Range(roamingTimeMin, roamingTimeMax);
         roamingDir = new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f));
         roamingDir = Vector3.Normalize(roamingDir);
+
+        animator.SetBool("isWalking", true);
 
         Roam();
     }

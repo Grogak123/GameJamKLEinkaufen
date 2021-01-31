@@ -27,10 +27,12 @@ public class FpsMovement : MonoBehaviour
     private float rotationVert = 0;
 
     private CharacterController charController;
+    private Animator animator;
 
     void Start()
     {
         charController = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -51,6 +53,13 @@ public class FpsMovement : MonoBehaviour
         movement.y = gravity;
         movement *= Time.deltaTime;
         movement = transform.TransformDirection(movement);
+
+        if (deltaX < 0.001 && deltaZ < 0.001) {
+            animator.SetBool("isWalking", false);
+        }
+        else {
+            animator.SetBool("isWalking", true);
+        }
 
         charController.Move(movement);
     }

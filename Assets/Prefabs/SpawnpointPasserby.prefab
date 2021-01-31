@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1868462850379174001}
   - component: {fileID: 8054567707240587494}
   m_Layer: 0
-  m_Name: PasserbySpawnpoint
+  m_Name: SpawnpointPasserby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chance: 0.25
-  passerby: {fileID: 2360148591187873146, guid: bb472725a8cad3a4ea94d74e9a8c7006, type: 3}
+  passerby: {fileID: 2197494242767167670, guid: 14833257e503ac547a8f55b3a55d55e2, type: 3}

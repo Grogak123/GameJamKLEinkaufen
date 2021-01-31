@@ -1905,7 +1905,7 @@ Transform:
   m_GameObject: {fileID: 5306208170187264792}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 5006037420078015376}
   - {fileID: 158270465379669069}
@@ -1997,8 +1997,8 @@ MonoBehaviour:
   detectionRadius: 10
   dread: 10
   roamingTimeMin: 0.5
-  roamingTimeMax: 3
-  idleTimeMin: 3
+  roamingTimeMax: 4
+  idleTimeMin: 2
   idleTimeMax: 8
 --- !u!1 &5361281897415077955
 GameObject:
