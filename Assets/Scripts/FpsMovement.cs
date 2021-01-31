@@ -54,7 +54,7 @@ public class FpsMovement : MonoBehaviour
         movement *= Time.deltaTime;
         movement = transform.TransformDirection(movement);
 
-        if (deltaX < 0.001 && deltaZ < 0.001) {
+        if (deltaX < 0.1 && deltaZ < 0.1) {
             animator.SetBool("isWalking", false);
         }
         else {
