@@ -151,7 +151,7 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'You didn''t find your mother!
 
-        Don''t cry, Press R tu try again
+        Don''t cry, Press R to try again
 
         or
         press Escape to Main Menu.'
