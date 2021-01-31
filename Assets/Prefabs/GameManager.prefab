@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5208285580023690589}
   - component: {fileID: 5208285580023690590}
   - component: {fileID: 5208285580023690588}
+  - component: {fileID: 8690186219910121441}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -63,6 +64,18 @@ MonoBehaviour:
   cellSize: 10
   passerbySpawner: {fileID: 166250974041646631, guid: 1e3b7af52294e1447b7d979846d80706, type: 3}
   enemySpawner: {fileID: 6335937901357164836, guid: ce5529179280cbc46961c3c5b7e11aa6, type: 3}
+--- !u!114 &8690186219910121441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5208285580023690591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f252eb7512e47fb48bbfb7b0c1aa6e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &681876342734979486
 PrefabInstance:
   m_ObjectHideFlags: 0

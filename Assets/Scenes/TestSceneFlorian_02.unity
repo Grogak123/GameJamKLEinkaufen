@@ -200,6 +200,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1485832650282582722, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
+      propertyPath: GameEndCanvas
+      value: 
+      objectReference: {fileID: 122497409}
     - target: {fileID: 7524189245839324577, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -262,6 +266,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
+--- !u!1 &122497409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1096960454, guid: a46a9fc6548faf747b9d18099e70c93a, type: 3}
+  m_PrefabInstance: {fileID: 122497408}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &125413616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269,10 +278,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5208285580023690588, guid: 7a06715f7d3db2a4790d3295b1821a8b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5208285580023690589, guid: 7a06715f7d3db2a4790d3295b1821a8b, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -320,6 +325,14 @@ PrefabInstance:
     - target: {fileID: 5208285580023690591, guid: 7a06715f7d3db2a4790d3295b1821a8b, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690186219910121441, guid: 7a06715f7d3db2a4790d3295b1821a8b, type: 3}
+      propertyPath: mainMenuName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690186219910121441, guid: 7a06715f7d3db2a4790d3295b1821a8b, type: 3}
+      propertyPath: gameSceneName
+      value: TestSceneFlorian_02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a06715f7d3db2a4790d3295b1821a8b, type: 3}

@@ -6,19 +6,20 @@ using UnityEngine.SceneManagement;
 public class JumpToMainMenu : MonoBehaviour
 {
 
-
+    public string mainMenuName;
+    public string gameSceneName;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene(mainMenuName);
         }
 
         if (Input.GetKeyDown(KeyCode.U))
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene(gameSceneName);
         }
     }
 }
