@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6335937901357164834}
   - component: {fileID: 6335937901357164837}
   m_Layer: 0
-  m_Name: EnemySpawnpoint
+  m_Name: SpawnpointEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff129b93646f96042a2c2dcdb1831e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overallChance: 25
-  enemyChance: 50
+  overallChance: 0.25
+  enemyChance: 0.5
   passerby: {fileID: 2360148591187873146, guid: bb472725a8cad3a4ea94d74e9a8c7006, type: 3}
   enemy: {fileID: 5306208170187264792, guid: cf2b3aa5060948944a16ad4023a92a62, type: 3}

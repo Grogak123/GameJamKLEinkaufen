@@ -22,7 +22,7 @@ public class SpawnerDistribution : MonoBehaviour {
         }
 
         for (int x = xSize - 3; x < xSize; x++) {
-            for (int z = zSize - 3; z < zSize - 3; z++) {
+            for (int z = zSize - 3; z < zSize; z++) {
                 float xPos = ((x - xSize / 2) * cellSize) + (cellSize / 2);
                 float zPos = ((z - zSize / 2) * cellSize) + (cellSize / 2);
                 Vector3 pos = new Vector3(xPos, 0f, zPos);
